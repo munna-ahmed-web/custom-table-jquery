@@ -97,8 +97,8 @@ const renderBackgroundChangeButton = ()=>{
         const button = $("<button>", {
           type: "button",
           text: singleButton.name,
-          val: singleButton.value, // Set the value property
-          click: handleButtonClick, // Add click event handler
+          val: singleButton.value, 
+          click: handleButtonClick, 
         });
 
         buttonContainer.append(button);

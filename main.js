@@ -13,7 +13,6 @@ const initalCustomValue = [
   { id: 10, name: "Address", checked: false, uniqid: "address" },
 ];
 
-
 const bgButtonData = [
   { name: "Ash", value: "ashColor" },
   { name: "Green", value: "greenColor" },
@@ -36,17 +35,17 @@ const updateCheckedValue = (name, value) =>{
 
 const handleCheckboxChange = (e) =>{
     if (e.target.checked){
-        initalColumnSize.push(e.target.value);
-        updateCheckedValue(e.target.value, true);
-        renderCheckBox();
-        renderTable()
+      initalColumnSize.push(e.target.value);
+      updateCheckedValue(e.target.value, true);
+      renderCheckBox(); //calling again to re render website
+      renderTable(); //calling again to re render website
     }else{
-        initalColumnSize = initalColumnSize.filter(
-          (value) => value != e.target.value
-        );
-        updateCheckedValue(e.target.value, false);
-        renderCheckBox();
-        renderTable();
+      initalColumnSize = initalColumnSize.filter(
+        (value) => value != e.target.value
+      );
+      updateCheckedValue(e.target.value, false);
+      renderCheckBox(); //calling again to re render website
+      renderTable(); //calling again to re render website
     }
 }
 
